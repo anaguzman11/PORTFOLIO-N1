@@ -3,34 +3,82 @@
   --color-fondo-suave: #eae7e2;
   --color-texto-principal: #104b28;
   --color-texto-secundario: #2b8750;
-  --color-acentro: var(--color-texto-secundario);
+  --color-acento: var(--color-texto-secundario);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-/*TIPOGRAFIAS*/
+/* ------------------------------------- */
+/* TIPOGRAFIAS Y ESTILOS BASE */
+/* ------------------------------------- */
+
 body {
-  font-family: "Poiret One";
+  font-family: "Montserrat", sans-serif;
   background-color: var(--color-base);
   color: var(--color-texto-principal);
   line-height: 1.6;
 }
+
 h1,
 h2,
 h3 {
-  font-family: "Italiana";
+  font-family: "Cal Sans", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #007366;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-fondo-suave);
+  color: var(--color-texto-secundario);
+}
+
+/* ------------------------------------- */
+/* ESTILOS DEL HEADER - ESCRITORIO (por defecto) */
+/* ------------------------------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--color-fondo-suave);
+}
+
+.logo {
+  width: 250px; /* Tamaño del logo en escritorio */
+}
+
+/* Menú de navegación en escritorio */
+.nav-menu {
+  display: flex; /* Muestra el menú de forma tradicional */
+  align-items: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: #2b8750;
-  font-family: "Italiana";
+  color: #007366;
+  font-family: "Cal Sans";
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
@@ -38,66 +86,37 @@ h3 {
   transition: color 0.3s ease;
 }
 
-/*ENCABEZADOS y TEXTOS*/
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #104b28;
-  font-family: "Italiana";
-}
-.about-me-text h2 {
-  text-align: center;
-}
-
-.about-me-image img {
-  width: 100%;
-  max-width: 300px;
-}
-
-.hero {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--color-fondo-suave);
-}
-
-.logo {
-  width: 600px;
-  height: auto;
-  margin: 10px;
-  display: flex;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
 .nav-menu a:hover {
   color: var(--color-acento);
 }
+
+/* El botón de hamburguesa está oculto en pantallas grandes */
+.hamburger-menu {
+  display: none;
+}
+
+/* ------------------------------------- */
+/* SECCION BIOGRAFIA */
+/* ------------------------------------- */
+
 .about-me-section {
   padding: 100px 20px 120px;
   background-color: var(--color-base);
   display: flex;
   justify-content: center;
+}
+
+.about-me-card {
+  background-color: #e0f0e9;
+  border-radius: 30px;
+  border-color: #007366;
+  box-shadow: 5px 5px 5px #2b8750;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
 }
 
 .about-me-image img {
@@ -107,45 +126,27 @@ h2 {
   object-fit: cover;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.about-me-card {
-  background-color: #e0f0e9;
-  border-radius: 30px;
-  border-color: #104b28;
-  box-shadow: 5px 5px 5px #2b8750;
-  padding: 40px;
-  max-width: 1000px;
-  width: 100%;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-  perspective: 1000px;
-}
+
 .about-me-text {
   flex: 1;
   min-width: 250px;
 }
+
 .about-me-text h2 {
   text-align: left;
   margin-bottom: 20px;
 }
+
 .about-me-text p {
-  margin-bottom: 60px;
+  margin-bottom: 15px;
   color: var(--color-texto-secundario);
-}
-.about-me-text h2 {
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
-.about-me-image img {
-  max-width: 90%;
-}
-@media (max-width: 768px) {
-  .about-me-card {
-    flex-direction: column;
-    text-align: center;
-  }
-}
+/* ------------------------------------- */
+/* SECCION SERVICIOS */
+/* ------------------------------------- */
 
 .servicios {
   padding: 100px 40px;
@@ -181,7 +182,7 @@ h2 {
 
 .servicio-card h3 {
   font-size: 1.3rem;
-  color: var(--color-texto-principal);
+  color: #007366;
   margin: 15px 0 10px;
 }
 
@@ -189,4 +190,98 @@ h2 {
   font-size: 0.95rem;
   color: var(--color-texto-secundario);
   padding: 0 20px 20px;
+}
+
+/* ------------------------------------- */
+/* ESTILOS DEL MENU DE HAMBURGUESA Y MOBILE */
+/* ------------------------------------- */
+@media (max-width: 768px) {
+  /* Header en dispositivos móviles */
+  .header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    min-height: 70px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 200px;
+    position: relative
+    z-index: 101;
+  }
+  /* El botón de hamburguesa se muestra */
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    top: 50%; /* AÑADIDO: Centrado verticalmente */
+    transform: translateY(-50%); /* AÑADIDO: Ajuste fino para centrado vertical */
+    right: 20px;
+    z-index: 100;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #2b8750;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* El menú de navegación se oculta */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease-in-out;
+    z-index: 99;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    font-size: 1.5rem;
+  }
+
+  /* Secciones principales en dispositivos móviles */
+  .about-me-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-me-text h2 {
+    text-align: center;
+  }
 }
