@@ -14,12 +14,11 @@
       <div class="logo-container">
         <img src="./images/Logo1.png" alt="logo-arq" class="logo" />
       </div>
-      <button class="hamburger-menu" aria-label="abrir menu de navegación">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </button>
-      <nav class="nav-menu">
+  <input type="checkbox" id="menu-toggle" hidden>
+  <label for="menu-toggle" class="hamburger">
+    &#9776;
+  </label>
+      <nav class="menu">
         <ul>
           <li><a href="#biografia">biografia</a></li>
           <li><a href="#servicios">servicios</a></li>
@@ -29,6 +28,20 @@
         </ul>
       </nav>
     </header>
+    <style>
+      .menu {
+        display: none;
+      }
+      #menu-toggle:checked + .hamburger + .menu {
+    display: block;
+      }
+      .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+      }
+    </style>
+    
+  
     
     <main>
       <section id="biografia" class="about-me-section">
@@ -98,4 +111,3 @@
   </body>
 <footer> Aca va el footer</footer>
 </html>
-<script src="main.js"></script>
