@@ -78,7 +78,6 @@ footer {
 
 .nav-menu a {
   text-decoration: none;
-  color: #f44b2a;
   font-family: "Cal Sans";
   font-weight: 600;
   text-transform: uppercase;
@@ -102,7 +101,6 @@ footer {
 
 .about-me-section {
   padding: 100px 20px 120px;
-  background: #ff00f7;
   background: linear-gradient(
     90deg,
     rgba(255, 0, 247, 0.6) 0%,
@@ -113,10 +111,10 @@ footer {
 }
 
 .about-me-card {
-  background-color: #e0f0e9;
-  border-radius: 30px;
-  border-color: #f44b2a;
-  box-shadow: 5px 5px 5px #f4b12a;
+  background-color: #fff;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
   max-width: 1000px;
   width: 100%;
@@ -139,8 +137,8 @@ footer {
 }
 
 .about-me-text h2 {
-  text-align: left;
-  margin-bottom: 20px;
+  text-align: right;
+  margin-bottom: 25px;
 }
 
 .about-me-text p {
