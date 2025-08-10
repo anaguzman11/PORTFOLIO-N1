@@ -157,13 +157,20 @@ footer {
 .experiencia {
   padding: 50px 40px;
   text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
+.experiencia h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgba(253, 201, 44, 0.9);
+}
 .experiencia-resena {
   max-width: 800px;
   margin: 0 auto 40px;
   font-size: 1.1rem;
   color: var(--color-texto-principal);
+  line-height: 1.5;
 }
 
 .galeria {
