@@ -45,7 +45,7 @@ h2 {
   text-align: center;
   font-size: 3rem;
   margin-bottom: 40px;
-  color: rgba(253, 201, 44, 0.841);
+  color: #b84b63;
 }
 
 footer {
@@ -146,7 +146,7 @@ footer {
 
 .about-me-text p {
   margin-bottom: 15px;
-  color: #f20069;
+  color: #aa445a;
   text-align: justify;
   text-justify: inter-word;
 }
@@ -157,13 +157,12 @@ footer {
 .experiencia {
   padding: 50px 40px;
   text-align: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .experiencia h2 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: rgba(253, 201, 44, 0.9);
+  text-align: center;
 }
 .experiencia-resena {
   max-width: 800px;
@@ -220,7 +219,7 @@ footer {
 }
 
 .servicio-card {
-  background-color: #be9f5c;
+  background-color: #d68b7d;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -239,14 +238,15 @@ footer {
 }
 
 .servicio-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: white;
   margin: 15px 0 10px;
+  letter-spacing: 2px;
 }
 
 .servicio-card p {
-  font-size: 0.95rem;
-  color: #805d18;
+  font-size: 1rem;
+  color: #ffffff;
   padding: 0 20px 20px;
 }
 
