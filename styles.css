@@ -1,8 +1,8 @@
 :root {
-  --color-base: #fdfdfd;
-  --color-fondo-suave: #eae7e2;
-  --color-texto-principal: #805d18;
-  --color-texto-secundario: #f4b12a;
+  --color-base: #ffab9f;
+  --color-fondo-suave: #ffac82;
+  --color-texto-principal: #b84b63;
+  --color-texto-secundario: #f17aaa;
   --color-acento: var(--color-texto-secundario);
 }
 
@@ -147,11 +147,54 @@ footer {
   text-align: justify;
   text-justify: inter-word;
 }
-.carousel-item img {
-  max-width: 50%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+
+/* ------------------------------------- */
+/*SECCION EXPERIENCIA*/
+/* ------------------------------------- */
+.experiencia {
+  padding: 80px 40px;
+  background-color: var(--color-fondo-suave);
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto; /* centra todo el contenido */
+}
+
+.experiencia-resena {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: var(--color-texto-principal);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* espacio entre imágenes */
+  max-width: 100%;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* asegura que sean cuadrados */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 0px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* en pantallas medianas, 2 columnas */
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr; /* en móviles, 1 columna */
+  }
 }
 /* ------------------------------------- */
 /* SECCION SERVICIOS */
@@ -261,5 +304,37 @@ footer {
 
   .about-me-text h2 {
     text-align: center;
+  }
+}
+
+/* ------------------------------------- */
+/*ANIMACION DE SCROLL*/
+/* ------------------------------------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@supports (animation-timeline: scroll()) {
+  .fade-up {
+    animation: fadeUp linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+}
+@supports not (animation-timeline: scroll()) {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
