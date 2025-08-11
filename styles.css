@@ -41,13 +41,6 @@ h3 {
   font-family: "Cal Sans", sans-serif;
 }
 
-h2 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 40px;
-  color: #b84b63;
-}
-
 footer {
   text-align: center;
   padding: 20px;
@@ -140,7 +133,7 @@ footer {
 
 .about-me-text h2 {
   text-align: right;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   color: #b84b63;
 }
 
@@ -162,14 +155,15 @@ footer {
 .experiencia h2 {
   font-size: 3rem;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+  color: #b84b63;
 }
 .experiencia-resena {
-  max-width: 800px;
-  margin: 0 auto 40px;
+  text-justify: inter-word;
   font-size: 1.1rem;
   color: var(--color-texto-principal);
-  line-height: 1.5;
+  line-height: 2;
+  text-align: justify;
 }
 
 .galeria {
@@ -203,6 +197,28 @@ footer {
   }
 }
 /* ------------------------------------- */
+/* SECCION PROGRAMAS & APLICACIONES*/
+/* ------------------------------------- */
+.programas {
+  padding: 50px 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+.programas h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #b84b63;
+}
+.programas-resena {
+  text-justify: inter-word;
+  font-size: 1.1rem;
+  color: var(--color-texto-principal);
+  line-height: 2;
+  text-align: right;
+}
+
+/* ------------------------------------- */
 /* SECCION SERVICIOS */
 /* ------------------------------------- */
 
@@ -231,20 +247,25 @@ footer {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-.servicio-card img {
+.servicios img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-
-.servicio-card h3 {
+.servicios h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b84b63;
+}
+.servicios h3 {
   font-size: 1.5rem;
   color: white;
   margin: 15px 0 10px;
   letter-spacing: 2px;
 }
 
-.servicio-card p {
+.servicios p {
   font-size: 1rem;
   color: #ffffff;
   padding: 0 20px 20px;
