@@ -135,6 +135,7 @@ footer {
   text-align: right;
   margin-bottom: 30px;
   color: #b84b63;
+  font-size: 3rem;
 }
 
 .about-me-text p {
@@ -168,32 +169,29 @@ footer {
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  gap: 10px; /* espacio entre imágenes */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   max-width: 100%;
   padding: 20px;
 }
 
 .galeria img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* asegura que sean cuadrados */
-  object-fit: cover; /* recorta sin deformar */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 0px;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .galeria {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* en pantallas medianas, 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .galeria {
-    grid-template-columns: 1fr; /* en móviles, 1 columna */
+    grid-template-columns: 1fr;
   }
 }
 /* ------------------------------------- */
@@ -217,7 +215,25 @@ footer {
   line-height: 2;
   text-align: right;
 }
+.iconos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  justify-items: center;
+}
+.icono {
+  text-align: center;
+}
 
+.icono img {
+  width: 90px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icono img:hover {
+  transform: scale(1.1);
+}
 /* ------------------------------------- */
 /* SECCION SERVICIOS */
 /* ------------------------------------- */
@@ -266,6 +282,21 @@ footer {
 }
 
 .servicios p {
+  font-size: 1rem;
+  color: #ffffff;
+  padding: 0 20px 20px;
+}
+/* ------------------------------------- */
+/* SECCION CONTACTO */
+/* ------------------------------------- */
+.contacto h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #b84b63;
+}
+
+.contacto p {
   font-size: 1rem;
   color: #ffffff;
   padding: 0 20px 20px;
